@@ -31,6 +31,8 @@ guard 'rspec', all_after_pass: false do
     "spec/requests/authentication_pages_spec.rb"
   end
 
+  watch(%r{^app/models/(.+)\.rb$}) { |m| "spec/models/#{m[1]}_spec.rb" }
+
   # Capybara features specs
   watch(%r{^app/views/(.+)/.*\.(erb|haml)$})          { |m| "spec/features/#{m[1]}_spec.rb" }
 
