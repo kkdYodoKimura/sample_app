@@ -1,3 +1,0 @@
-a
-no conflict
-This is master branch.
